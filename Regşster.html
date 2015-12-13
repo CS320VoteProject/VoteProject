@@ -1,0 +1,53 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])!="")
+{
+	header("Location: home.php");
+}
+include_once 'dbconnect.php';
+
+if(isset($_POST['btn-signup']))
+{
+	$username = mysql_real_escape_string($_POST['uname']);
+	$password = mysql_real_escape_string($_POST['pass']);
+	
+	if(mysql_query("INSERT INTO users(username,password) VALUES('$username','$password')"))
+	{
+		//
+	}
+	else
+	{
+		//
+	}
+}
+?>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="main.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vote Project</title>
+</head>
+<body>
+
+<center><div id="login-form">
+			<form method="post">
+				<table align="center" width="30%" border="0">
+					<tr>
+						<td><input type="text" name="uname" placeholder="Username" required /></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="pass" placeholder="Password" required /></td>
+					</tr>
+					<tr>
+						<td><button type="submit" id="btn-signup" onclick="regedIndex.html">Register</button></td>
+					</tr>
+					<tr>
+						<td><a href="index.html">Login</a></td>
+					</tr>
+				</table>
+			</form>
+		</div></center>
+	</body>
+</html>
