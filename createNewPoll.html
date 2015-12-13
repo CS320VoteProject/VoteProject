@@ -52,21 +52,19 @@
 	</script>
 	</head>
 	<body>
-	<div id="logo" align="left" style="width: 500px;
-    height: 100px; margin: 10px 15px 10px 8px;">
-			<a href="index.html">
-				<img src="images/logo.png">
-			</a>
+	<div id="header">
+			<div id="left" style="width: 500px;
+				height: 100px; margin: 10px 15px 10px 8px;">
+				<a href="index.html">
+					<img src="images/logo.png">
+				</a>
+			</div>
+			<div id="right">
+				<div id="content" align="right">
+					hi' <?php echo $userRow['username']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+				</div>
+			</div>
 		</div>
-		<div class="logged">
-			<form name="logged">
-				<fieldset>
-					<legend>
-					</legend>
-					</br><input type="text" onLoad="showLoggedInfo();"/ placeholder="username:">
-				</fieldset>
-			</form>
-		</div></br></br>
 	<center>
 	<div id="qa">
 		<form name= "poll" method="post">
