@@ -133,33 +133,24 @@
 			<a href=""> Login</a>
 		</div>
 		             
-		<div class="btn" id="btnlgn" onclick="popupBox('show');" style="float:right">
-			<a href=""> Register </a>
-		</div>
 		</br>
-		<div class="btns" id="lgn" onClick=" return validateLoginForm()">
-			<form name="login" method="post" onSubmit="popupBox('hide');" >
-				<center><fieldset>
-					<legend>
-						Login
-					</legend></br>
-					E-Mail: <input type="text" name="email" /></br></br>
-					Password: <input type="password" name="password" /></br></br>
-					<a href="">Login </a>
-				</fieldset></center>
-			</form>
-		</div>
-			
-		<div class="btns" id="reg">
-			<form name="register" onSubmit="popupBox('hide');" action="regedIndex.html" method="post">
-				<center><fieldset>
-					<legend>
-						Register
-					</legend></br>
-					E-Mail: <input type="text" name="email" /></br></br>
-					Password: <input type="password" name="password" /></br></br>
-					<a href="">Register</a>	
-				</fieldset></center>
+		
+		<div class="btn">
+			<form method="post">
+				<table align="center" width="30%" border="0">
+					<tr>
+						<td><input type="text" name="email" placeholder="Your Email" required /></td>
+					</tr>
+					<tr>
+						<td><input type="password" name="pass" placeholder="Your Password" required /></td>
+					</tr>
+					<tr>
+						<td><button type="submit" name="btn-login">Login</button></td>
+					</tr>
+					<tr>
+						<td><a href="register.html">Register</a></td>
+					</tr>
+				</table>
 			</form>
 		</div>
 		
