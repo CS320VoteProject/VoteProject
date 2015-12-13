@@ -1,20 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-
 body {
-  background-image: url("images/bg.jpg");
+	background-image: url("images/bg.jpg");
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+	font-size: 24px;
+	color: white;
 }
-
-h1 {
-  margin-top: 0;
-}
-
-h2 {
-  color: white;
-  text-align: center;
-  font-family: "Poiret One";
-  font-size: 72px;
-}
-
 ul {
   list-style-type: none outside none;
 }
@@ -22,55 +12,83 @@ ul {
 li {
   position: relative;
   display: inline;
-  margin: 20px;
-  
-}
-  
-.inner {
-  text-align: center;
-  position: absolute;
-  background-color: url("");
-  width: 50em;
-}
-   
-p {
-  font-family: "Poiret One";
-  font-size: 24px;
-  font: bold;
+  margin: 10px;
 }
 
-#footer {
-  text-align: center;
-  position:absolute;
-   bottom:0;
-   width:98%;
-   height:100px;
-}
-  #footer.button {
-    
-  }
-  #footer.icons {
-  	width:100%;
-	  height:100px;
-	  position:absolute;
-	  bottom:0;
-	  left:0;
-  }
-
-.poll {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Poiret One";
+h1{
+	font-size: 72px;
+	font-family: 'Slabo 27px', serif;
+	color: white;
+	float: center;
 }
 
-.button {
+h2{
+	font-size: 72px;
+	font-family: 'Slabo 27px', serif;
+	color: white;
+	text-align: center;
+}
+
+.logged {
+	text-align: right;
+    float: right;
+    height: 80px;
+    width: 250px;
+	
+}
+
+.btns {
+	font-family: 'Slabo 27px', serif;
+	font-size: 12px;
+	font: bold;
 	display: inline-block;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
+	float: right;
 	text-decoration: none;
 	font: 20px/100% bold;
-	font-family: "Poiret One";
+	font-weight: bold;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.8);
+	border-radius: .5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #1ebee7;
+	border: solid 1px transparent;
+	background: white;
+}
+
+.btn{
+	font-family: 'Slabo 27px', serif;
+	font-size: 12px;
+	font: bold;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	float: center;
+	text-decoration: none;
+	font: 20px/100% bold;
+	font-weight: bold;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.8);
+	border-radius: .5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #1ebee7;
+	border: solid 1px transparent;
+	background: white;
+}
+.buttons{
+	font-family: 'Slabo 27px', serif;
+	font-size: 12px;
+	font: bold;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	float: right;
+	text-decoration: none;
+	font: 20px/100% bold;
 	font-weight: bold;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.8);
@@ -78,43 +96,89 @@ p {
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	color: #1ebee7;
 	border: solid 1px #0076a3;
-	background: #d9d9d9;
+	background: #1ebee7;
 }
-.button:hover {
+.buttons:hover {
 	text-decoration: none;
 	background: #b3b3b3;
 }
-.button:active {
+.buttons:active {
   text-decoration: none;
 	position: relative;
 	top: 1px;
 	color: #cccccc;
 }
 
-#popupbox-login {
+#lgn {
   text-align: center;
-  float: right;
-  font-family: "Poiret One";
+  font-family: 'Slabo 27px', serif;
   font-size: 18px;
-  font-weight: bold;
-  background-color: #fffff3;
+  background-color: #f9f9ef;
   width: 20em;
-  visibility: hidden;
-}
-#popupbox-register {
-  text-align: center;
-  text-decoration: none;
-  float: right;
-  font-family: "Poiret One";
-  font-size: 18px;
-  font-weight: bold;
-  display: inline-block;
-  background-color: #fffff3;
-  width: 20em;
-  visibility: hidden;
-}
-
-#isPrivate {
-  text-align: center;
   visibility: visible;
 }
+#reg {
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
+  display: inline-block;
+  background-color: #F9F9EF;
+  width: 20em;
+  visibility: visible;
+}
+
+.desc {
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+	font-size: 24px;
+	color: white;
+}
+
+.desc2 {
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+	font-size: 24px;
+	color: white;
+	float: center;
+}
+
+fieldset {
+	border: 10px solid transparent;
+	
+}
+
+legend {
+	font-size: 36px;	
+}
+
+.key {
+	visibility: hidden;
+}
+
+a {
+	text-decoration:none;
+	color: #1ebee7;
+}
+a:hover {
+	color: #d9d9d9;
+	
+}
+.button:active {
+	position: relative;
+	top: 1px;
+	color: red;
+}
+#footer {
+  text-align: center;
+  display: inline;
+  height:60px; 
+  float: center;
+  bottom:0; 
+  width:100%;
+}
+  #footer.icons {
+	width:100%;
+	height:30px;
+	position:absolute;
+  }
