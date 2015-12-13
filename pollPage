@@ -1,0 +1,36 @@
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<title>
+			Vote Project
+		</title>
+	
+		<script type="text/javascript">
+			function showQuestions() {
+				
+				var question=document.write(localStorage.getItem("QuestionStor"));
+				
+				var answers=localStorage.getItem("AnswersStor");
+				for(var i=0; i<10; i++){
+				document.write( answers[i]);
+				}
+				//document.getElementById("sonuclarim").innerHTML=question.value;
+			}
+			
+			window.onload=showQuestions;
+		</script>
+
+		
+		
+		<form>
+			<label>
+			<input type="radio" name="genelisim" value="mustafa" id="sonuclarim" href = pollPage.html >
+			isim1
+			</label>
+
+       
+		</form>
+	</body>
+</html>
