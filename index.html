@@ -129,7 +129,39 @@
 			</a>
 		</div>
 		
-		
+		<div class="btn" id="btnlgn" onclick="popupBox('show');" style="float:right">
+			<a href=""> Login</a>
+		</div>
+		             
+		<div class="btn" id="btnlgn" onclick="popupBox('show');" style="float:right">
+			<a href=""> Register </a>
+		</div>
+		</br>
+		<div class="btns" id="lgn" onClick=" return validateLoginForm()">
+			<form name="login" method="post" onSubmit="popupBox('hide');" >
+				<center><fieldset>
+					<legend>
+						Login
+					</legend></br>
+					E-Mail: <input type="text" name="email" /></br></br>
+					Password: <input type="password" name="password" /></br></br>
+					<a href="">Login </a>
+				</fieldset></center>
+			</form>
+		</div>
+			
+		<div class="btns" id="reg">
+			<form name="register" onSubmit="popupBox('hide');" action="regedIndex.html" method="post">
+				<center><fieldset>
+					<legend>
+						Register
+					</legend></br>
+					E-Mail: <input type="text" name="email" /></br></br>
+					Password: <input type="password" name="password" /></br></br>
+					<a href="">Register</a>	
+				</fieldset></center>
+			</form>
+		</div>
 		
 		<div class="desc" id="description">
 			<header>
