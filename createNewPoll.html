@@ -32,17 +32,20 @@
 		<script type="text/javascript">
 		function getPollInfo () {
 			var question = document.poll.elements[0].value;
-			
 			var answers = new Array ();
 				for(var i=0; i<10; i++){
-					answers.push[document.poll.elements[i+1].value];
+					answers[i]=document.poll.elements[i+1].value;
 				}
-			localStorage.setItem("question",question);
-			localStorage.setItem("answers",answers);
+			localStorage.setItem("QuestionStor",document.poll.elements[0].value);
+			localStorage.setItem("AnswersStor",answers);
 		}
 		
 		function check() { <!-- there is a problem here. -->
+			if(document.getElementById('private').checked) {
 			  document.getElementById('key').style.visibility = visible;
+			} else {
+			  document.getElementById('key').style.visibility = hidden;
+			}
       }
 	  
 	  
