@@ -1,44 +1,15 @@
-<!-
-<?php
-  $host = "localhost";
-  $user = "";
-  $pass = "";
-  $db = "";
-  
-  my_sql_connect($host, $user, $pass);
-  my_sql_select_db($db);
-  
-  if(isset($_POST['username'])) {
-    $email = $_POST['email'];
-    $password =   $_POST['password'];
-    $sql = SELECT email='".$email"' FROM table_name LIMIT 1;
-    $res = mysql_query($sql);
-    if (mysql_num_rows($res) == 1) {
-      echo "OK";
-      exit();
-    } else {
-      echo "Invalid login information!"
-      exit();
-    }
-  }
-?>
-->
+
 
 <html>
 	<head>
+		
 		<link type="text/css" rel="stylesheet" href="main.css"/>
 		<script language="JavaScript" type="text/javascript">
-			<!--function showLoggedInfo() {
-				$.ajax({
-					type: "POST",
-					url: "checkPassword.php",
-					data: { mail:mail}
-				}).done(function(data) {
-					if(echo "OK" >= 0) {
-						
-					} 
+			function showLoggedInfo() {
+				var mail = localStorage.getItem("mail");
+				 document.write(mail);
 			}
-			-->
+			
 		</script>
 		<title>
 		Vote Project
@@ -46,28 +17,41 @@
 	</head>
 	
 	<body>
-		<div id="logo">
+	
+		<div id="logo" align="left" style="width: 500px;
+    height: 100px; margin: 10px 15px 10px 8px;">
 			<a href="index.html">
 				<img src="images/logo.png">
 			</a>
 		</div>
 		
-		<!--<div id="logged">
-			showLoggedInfo();
+		<div class="logged">
+			<form name="logged">
+				<fieldset>
+					<legend>
+					</legend>
+					</br><input type="text" onLoad="showLoggedInfo();"/ placeholder="username:">
+				</fieldset>
+			</form>
 		</div>
-		-->
+		
 		
 		<div id="desc2">
 			<header>
-				<h2>
+				<h2></br>
 				  VOTE Project
 				</h2>
 			</header>
+		</div>
+		<div class="desc2" id="desc2">
+			To create a poll is much easier now, </br>
+			just type in a question you'd like to ask and up to 10 possible answers.</br></br>
+		<div></br>
+		<div class="btn" id="btn" style="text-decoration:none">
 			<a href="createNewPoll.html">
-				<input type="button" id="createPoll" value="Create new poll!"/>
+				Create new poll!
 			</a>
 		</div>
-		
 		<div id="contacts">
 			<footer id="footer">
 				<ul class="icons" type="none";>
