@@ -1,0 +1,57 @@
+
+
+<html>
+	<head>
+		<title>
+		  Vote Project
+		</title>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<script type="text/javascript">
+	</script>
+	</head>
+	<body>
+	<div id="header">
+			<div id="left" style="width: 500px;
+				height: 100px; margin: 10px 15px 10px 8px;">
+				<a href="index.html">
+					<img src="images/logo.png">
+				</a>
+			</div>
+			<div id="right">
+				<div id="content" align="right">
+					Logged as <?php echo $userRow['username']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+				</div>
+			</div>
+		</div>
+	<center>
+	</br></br></br></br>
+	Your poll has been successfully created. </br></br>
+	-To share your poll with your friends, please click "Poll Link".</br>
+	-To get the results of your poll, please click "Result Link".</br></br>
+	<div id="qa">			
+			<div class="btn" id="btn" style="text-decoration:none">
+				<a href="pollPage.html">
+					Poll Link 
+				</a>
+			</div>
+			                                          
+			<div class="btn" id="btn" style="text-decoration:none">
+				<a href="resultPage.html">
+					Result Link
+				</a>
+			</div>			
+		</div></center>
+		</br></br></br></br></br></br></br></br></br>
+		<div id="contacts">
+			<footer id="footer">
+				<ul class="icons">
+					<li>
+						<a href="https://twitter.com/voteproject"> <img src="images/twitter.svg"></a>
+						<a href="https://facebook.com/voteproject"> <img src="images/facebook.svg"></a>
+						<a href="https://github.com/CS320VoteProject/VoteProject"> <img src="images/github.svg"></a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+</body>
+</html>
