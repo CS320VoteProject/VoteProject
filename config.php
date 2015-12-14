@@ -26,7 +26,7 @@
 
 			 if($add){ 
 
-				echo "<br><a href=loggedIndex.html>You have registered successfully!
+				echo "<br><a href=regedIndex.html>You have registered successfully!
 
 				Please click. </a>";
 
