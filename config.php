@@ -1,5 +1,5 @@
 <?php
-	include ("vtbaglanti.php");
+	include ("dbconnect.php");
 
 	$email=$_POST["email"];
 	$sifre=$_POST["sifre"];
