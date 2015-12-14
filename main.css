@@ -56,11 +56,26 @@ h2{
 	color: #1ebee7;
 	border: solid 1px transparent;
 	background: white;
+	visibility: hidden;
 }
+a {
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+	font: bold;
+	text-decoration:none;
+	color: #1ebee7;
+	
+	color: #1ebee7;
+	border: solid 1px transparent;
 
+}
+a:hover {
+	color: #d9d9d9;
+	
+}
 .btn{
 	font-family: 'Slabo 27px', serif;
-	font-size: 12px;
+	font-size: 26px;
 	font: bold;
 	display: inline-block;
 	outline: none;
@@ -68,16 +83,17 @@ h2{
 	text-align: center;
 	float: center;
 	text-decoration: none;
-	font: 20px/100% bold;
 	font-weight: bold;
-	padding: .5em 2em .55em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.8);
+	padding: .3em .9em .5em;
 	border-radius: .5em;
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	color: #1ebee7;
 	border: solid 1px transparent;
 	background: white;
 }
+.btn:hover {
+	color: #d9d9d9;
+}
+
 .buttons{
 	font-family: 'Slabo 27px', serif;
 	font-size: 12px;
@@ -88,7 +104,6 @@ h2{
 	text-align: center;
 	float: right;
 	text-decoration: none;
-	font: 20px/100% bold;
 	font-weight: bold;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.8);
@@ -156,14 +171,6 @@ legend {
 	visibility: hidden;
 }
 
-a {
-	text-decoration:none;
-	color: #1ebee7;
-}
-a:hover {
-	color: #d9d9d9;
-	
-}
 .button:active {
 	position: relative;
 	top: 1px;
@@ -174,11 +181,13 @@ a:hover {
   display: inline;
   height:60px; 
   float: center;
-  bottom:0; 
-  width:100%;
+  top:200; 
+  width:70%;
 }
   #footer.icons {
 	width:100%;
 	height:30px;
-	position:absolute;
+	
+	position:relative;
   }
+
