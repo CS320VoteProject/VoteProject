@@ -1,28 +1,3 @@
-<?php
-  $host = "localhost";
-  $user = "";
-  $pass = "";
-  $db = "";
-  
-  my_sql_connect($host, $user, $pass);
-  my_sql_select_db($db);
-  
-  if(isset($_POST['username'])) {
-    $email = $_POST['email'];
-    $password =   $_POST['password'];
-    $sql1 = SELECT * FROM table_name WHERE question='".$question"' LIMIT 1;
-	$sql2 = SELECT * FROM table_name WHERE answers='".$answers"' LIMIT 10;
-    $res = mysql_query($sql);
-    if (mysql_num_rows($res) == 1) {
-      echo "Question";
-      exit();
-    } else if (mysql_num_rows($res) == 10){
-      echo "Answers"
-      exit();
-    }
-  }
-?>
-
 <html>
 	<head>
 		<title>
@@ -30,25 +5,6 @@
 		</title>
 		<link type="text/css" rel="stylesheet" href="main.css"/>
 		<script type="text/javascript">
-		function getPollInfo () {
-			var question = document.poll.elements[0].value;
-			var answers = new Array ();
-				for(var i=0; i<10; i++){
-					answers[i]=document.poll.elements[i+1].value;
-				}
-			localStorage.setItem("QuestionStor",document.poll.elements[0].value);
-			localStorage.setItem("AnswersStor",answers);
-		}
-		
-		function check() { <!-- there is a problem here. -->
-			if(document.getElementById('private').checked) {
-			  document.getElementById('key').style.visibility = visible;
-			} else {
-			  document.getElementById('key').style.visibility = hidden;
-			}
-      }
-	  
-	  
 	</script>
 	</head>
 	<body>
@@ -61,15 +17,15 @@
 			</div>
 			<div id="right">
 				<div id="content" align="right">
-					hi' <?php echo $userRow['username']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+					Logged as <?php echo $userRow['username']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
 				</div>
 			</div>
 		</div>
 	<center>
 	<div id="qa">
-		<form name= "poll" method="post">
+		<form name= "poll" action="pollInfo.php" method="post">
 			<p><fieldset><legend>VOTE Project Poll</legend>
-			Question: <input type="text" id="question" size="100" maxlength="300" placeholder="Max. 300 characters for a question" /> <br/><br/>
+			Question: <input type="text" name="question" size="100" maxlength="300" placeholder="Max. 300 characters for a question" /> <br/><br/>
 			
 			Answers: (Max. 10 answers)</br></br>
 			1. <input type="text" name="answer1"  size="20" maxlength="30" /> <br/><br/>
@@ -81,33 +37,25 @@
 			7. <input type="text" name="answer7"  size="20" maxlength="30" /> <br/><br/>
 			8. <input type="text" name="answer8"  size="20" maxlength="30" /> <br/><br/>
 			9. <input type="text" name="answer9"  size="20" maxlength="30" /> <br/><br/>
-			10. <input type="text" name="answer10" size="20" maxlength="30" /> <br/><br/>
-			</fieldset></p>
-		</br>
-		<form name="isPrivate" method="post" action="">
-			<fieldset>
-				<legend></legend>
-				<input type="radio" id="public" value="public"/> Public
-				<input type="radio" id="private" value="private" onclick="check();"/> Private </br></br>
-		</form>
-		<form name="smt">
-				<input type="text" id="keyy" size="10" maxlength="3"/>
-			<input type="submit" name="submit" value="Submit" size="40" onClick="getPollInfo();" /> <br/><br/>
-		
-			<br/>
-		</form>	
+			10. <input type="text" name="answer10" size="20" maxlength="30" /> </br></br>
 			
-			<div class="btn" id="btn" style="text-decoration:none">
-				<a href="pollPage.html">
-					Poll Link 
-				</a>
-			</div>
-			                                          
-			<div class="btn" id="btn" style="text-decoration:none">
-				<a href="resultPage.html">
-					Result Link
-				</a>
-			</div>			
-		</div></center>
+			<input type="radio" id="public" value="public"/> Public
+			<input type="radio" id="private" value="private" onclick="check();"/> Private </br></br>
+			<input type="text" id="keyy" size="10" maxlength="3"/></br></br>
+			<input type="submit" class="btn" value="Submit" size="40" onClick="getPollInfo();" /> <br/><br/>
+			</fieldset></p>
+		</form>			
+	</center>
+		<div id="contacts">
+			<footer id="footer">
+				<ul class="icons">
+					<li>
+						<a href="https://twitter.com/voteproject"> <img src="images/twitter.svg"></a>
+						<a href="https://facebook.com/voteproject"> <img src="images/facebook.svg"></a>
+						<a href="https://github.com/CS320VoteProject/VoteProject"> <img src="images/github.svg"></a>
+					</li>
+				</ul>
+			</footer>
+		</div>
 </body>
 </html>
