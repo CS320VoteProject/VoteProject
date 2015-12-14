@@ -1,7 +1,7 @@
 <?php
 	include("dbconnect.php");
 
-	$email=$_POST["email"]; 
+	$username=$_POST["username"]; 
 
 	$password=$_POST["password"];
 
@@ -13,16 +13,16 @@
 
 	 }else{ 
 
-		 $query=mysql_query ("SELECT * FROM users WHERE email= $email  and
+		 $query=mysql_query ("SELECT * FROM users WHERE username= $username  and
 		password= $spassword ");
 
 		 if (mysql_num_rows ($query)>0) {
 
-			 $_SESSION[ email ] = "$email";
+			 $_SESSION[ username ] = "$username";
 
 			 header("Refresh:1 ; url=loggedIndex.html");
 
-			echo "Welcome $email ! You logged in now!<br>";
+			echo "Welcome $username ! You logged in now!<br>";
 
 		 }else{
 
