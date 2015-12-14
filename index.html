@@ -28,7 +28,6 @@
     }
   }
 ?>
-
 -->
 
 
@@ -122,36 +121,21 @@
 		</title>
 	</head>
 	<body>
-		<div id="logo" align="left" style="width: 500px;
-    height: 100px; margin: 10px 15px 10px 8px;">
-			<a href="index.html">
-				<img src="images/logo.png">
-			</a>
-		</div>
-		
-		<div class="btn" id="btnlgn" onclick="popupBox('show');" style="float:right">
-			<a href=""> Login</a>
-		</div>
-		             
-		</br>
-		
-		<div class="btn">
-			<form method="post">
-				<table align="center" width="30%" border="0">
-					<tr>
-						<td><input type="text" name="email" placeholder="Your Email" required /></td>
-					</tr>
-					<tr>
-						<td><input type="password" name="pass" placeholder="Your Password" required /></td>
-					</tr>
-					<tr>
-						<td><button type="submit" name="btn-login">Login</button></td>
-					</tr>
-					<tr>
-						<td><a href="register.html">Register</a></td>
-					</tr>
-				</table>
-			</form>
+		<div id="logo">
+			<div id="left" style="width: 500px;
+				height: 100px; margin: 10px 15px 10px 8px;">
+				<a href="index.html">
+					<img src="images/logo.png">
+				</a>
+			<div id="right" style="position: relative; left:1200px; bottom:100px">
+				<div class="btn" id="btnlgn" style="float:right">
+					<a href="register.html"> Register</a>
+				</div>
+				<div class="btn" id="btnlgn" style="float:right">
+					<a href="popupbox.html"> Login</a>
+				</div>
+				
+			</div>
 		</div>
 		
 		<div class="desc" id="description">
