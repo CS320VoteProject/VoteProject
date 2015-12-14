@@ -1,36 +1,42 @@
 <html>
 	<head>
+	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<script type="text/javascript">
+	</script>
+	<title>Vote Project</title>
 	</head>
 	<body>
-		
-		<title>
-			Vote Project
-		</title>
-	
-		<script type="text/javascript">
-			function showQuestions() {
-				
-				var question=document.write(localStorage.getItem("QuestionStor"));
-				
-				var answers=localStorage.getItem("AnswersStor");
-				for(var i=0; i<10; i++){
-				document.write( answers[i]);
-				}
-				//document.getElementById("sonuclarim").innerHTML=question.value;
-			}
+		<div id="header">
 			
-			window.onload=showQuestions;
-		</script>
-
-		
-		
-		<form>
-			<label>
-			<input type="radio" name="genelisim" value="mustafa" id="sonuclarim" href = pollPage.html >
-			isim1
-			</label>
-
-       
+		<div id="left" style="width: 500px;
+				height: 100px; margin: 10px 15px 10px 8px;">
+				<a href="index.html">
+					<img src="images/logo.png">
+				</a>
+			</div>
+			<div id="right">
+				<div id="content" align="right">
+					Logged as <?php echo $username['username']; ?>&nbsp;<a href="logout.php">Sign Out</a>
+				</div>
+			</div>
+		</div>
+		<form action="holdoption.php" method="get">
+			<ul id="answersList">
+				<li>
+					Question: <?php echo $question['question']; ?>&nbsp;</br></br></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer1"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer2"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer3"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer4"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer5"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer6"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer7"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer8"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer9"])?></br>
+					<input type="radio"/> <?php echo htmlspecialchars($_GET["answer10"])?></br></br></br>
+					<input type="submit" class="btn" value="Submit"/>
+				</li>
+			</ul>
 		</form>
 	</body>
 </html>
