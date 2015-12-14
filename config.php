@@ -2,9 +2,10 @@
 	include ("dbconnect.php");
 
 	$email=$_POST["email"];
-	$sifre=$_POST["sifre"];
+	$password=$_POST["password"];
+	$username=$_POST["username"];
 
-	if(($email=="") or ($sifre=="")){ 
+	if(($email=="") or ($password=="") or ($username==""){ 
 
 		 echo "<br>Please fill all information"; 
 		 exit(); 
@@ -21,8 +22,8 @@
 
 		 }else{
 
-		 $add =mysql_query("insert into users (email,password) value
-		($email , $password)");
+		 $add =mysql_query("insert into users (email,username,password) value
+		($email , $username, $password )");
 
 			 if($add){ 
 
