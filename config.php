@@ -1,54 +1,29 @@
 <?php
-	include ("dbconnect.php");
-
-	$email=$_POST["email"];
-	$password=$_POST["password"];
-	$username=$_POST["username"];
-
-	if(($email=="") or ($password=="") or ($username==""){ 
-
-		 echo "<br>Please fill all information"; 
-		 exit(); 
-			
-	}else{ 
-
-		$query=mysql_query("select * from users where email = $email");
-
+    ob_start();
+    include "dbconnect.php";
+	
+	if($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$email=$_POST["email"];
+		$password=$_POST["password"];
+		$username=$_POST["username"];
+		$submit = isset($_POST['submit']) ? $_POST['submit'] : null;
+		$sql="select * from users where email = '".$email."' and username = '".$username."'";
+		$query=mysql_query($sql);
 		$counter=mysql_num_rows($query);
-
-		 if ($counter!=0){ 
-
-		 echo "<font size= 3 >This e-mail has been registered before. Please login.</font>";
-
-		 }else{
-
-		 $add =mysql_query("insert into users (email,username,password) value
-		($email , $username, $password )");
-
-			 if($add){ 
-
-				echo "<br><a href=regedIndex.html>You have registered successfully!
-
-				Please click. </a>";
-
+		if ($counter!=0){ 
+			echo "<font size= 3 >This user has been registered before. Please check information.</font>";
+		}else{
+			$sql2 = "INSERT INTO users(email, password, username) VALUES ('".$email."','".$password."','".$username."')";
+			$add = mysql_query($sql2);
+			 if($add >= 0){ 
+				echo "<br>You have registered successfully!
+				Please click. ";
+				header("Location:regedIndex.html");
 			 }else{ 
-
-				 echo "Info could not write on database!"; 
-
-				 exit(); 
+				echo "Info could not write on database!"; 
 
 			 } 
-
-		 }
-
-	 }
-
- } 
-
-	else { 
-	
-		exit ();
-	
-	}
-	
+			ob_end_flush();
+		}
+	  }
 ?>
