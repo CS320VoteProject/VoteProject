@@ -4,34 +4,6 @@
     Created for CS 320 Software Engineering Course in Özyeğin University
 ->
 
-<!-- <?php
-	include_once 'ayar.php';
-  $host = "localhost";
-  $user = "root";
-  $pass = "karateke23";
-  $db = "vote_project";
-  
-  my_sql_connect($host, $user, $pass);
-  my_sql_select_db($db);
-  
-  if(isset($_POST['username'])) {
-    $username = $_POST['username'];
-    $password =   $_POST['password'];
-    $sql = SELECT * FROM table_name WHERE username='".$username"' AND password='".$password"' LIMIT 1;
-    $res = mysql_query($sql);
-    if (mysql_num_rows($res) == 1) {
-      echo "Logged in";
-      exit();
-    } else {
-      echo "Invalid login information!"
-      exit();
-    }
-  }
-?>
--->
-
-
-
 <html>
 	<head>
 	<link type="text/css" rel="stylesheet" href="main.css"/>
@@ -99,7 +71,8 @@
 					<!-- db will be processing -->
 				}
 			}
-	// function popupBox(showhide){
+			
+		// function popupBox(showhide){
 		//	if(showhide == "show"){
 			//	if(document.getElementById('lgn')) {
 			//		document.getElementById('lgn').style.visibility="visible";
@@ -123,15 +96,15 @@
 		<div id="logo">
 			<div id="left" style="width: 500px;
 				height: 100px; margin: 10px 15px 10px 8px;">
-				<a href="index.html">
+				<a href="index.php">
 					<img src="images/logo.png">
 				</a>
 			<div id="right" style="position: relative; left:1200px; bottom:100px">
 				<div class="btn" id="btnlgn" style="float:right">
-					<a href="register.html"> Register</a>
+					<a href="register.php"> Register</a>
 				</div>
 				<div class="btn" id="btnlgn" style="float:right">
-					<a href="popupbox.html"> Login</a>
+					<a href="login.php"> Login</a>
 				</div>
 				
 			</div>
