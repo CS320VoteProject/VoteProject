@@ -1,22 +1,9 @@
-
-
 <html>
 	<head>
 		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 		<link type="text/css" rel="stylesheet" href="popupbox.css"/>
 		<link type="text/css" rel="stylesheet" href="main.css"/>
 	    <script type="text/javascript" src="https://www.google.com/jsapi">
-		 
-		function display(param) {
-			if(document.getElementById('login')) {
-				if(document.getElementById('login').style.display == "none";) {
-					document.getElementById('login').style.display = "block";
-				} else {
-					document.getElementById('login').style.display = "none";
-				}
-			}
-		}
-		
 	  
 	</script>
 	</head>
@@ -25,7 +12,7 @@
 	<div id="logo">
 			<div id="left" style="width: 500px;
 				height: 100px; margin: 10px 15px 10px 8px;">
-				<a href="index.html">
+				<a href="index.php">
 					<img src="images/logo.png">
 				</a>
 			<div id="right">
@@ -36,7 +23,7 @@
 		<div id="login">
 			<div id="triangle"></div>
 			<h1>Login</h1>
-				<form action="logincheck.php" method="post">
+				<form  method="post" action="logincheck.php">
 					<input type="text" name="username" placeholder="Username" />
 					<input type="password" name="password" placeholder="Password" />
 					<input type="submit" value="Log in"/>
