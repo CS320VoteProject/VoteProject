@@ -1,34 +1,30 @@
 <?php
-	include("dbconnect.php");
-
+	ob_start();
+	include "dbconnect.php";
 	$username=$_POST["username"]; 
-
 	$password=$_POST["password"];
+	$username=stripslashes($username);
+	$password=stripslashes($password);
+	$username=mysql_real_escape_string($username);
 
-	if(($email=="")or($password=="")){ 
+		$sql="SELECT * FROM users WHERE username= '".$username."' and
+			password= '".$password."'";
+		$query = mysql_query ($sql);
+		$count = mysql_num_rows ($query);
+		 if ($count == 1) {
 
-		 echo "Please fill all information"; 
+			 
+			$_SESSION[ 'username' ] = "$username";
+			echo "Welcome $username ! <br>You logged in now! ";
+			 header("Location:loggedIndex.html");
 
-		 exit(); 
-
-	 }else{ 
-
-		 $query=mysql_query ("SELECT * FROM users WHERE username= $username  and
-		password= $spassword ");
-
-		 if (mysql_num_rows ($query)>0) {
-
-			 $_SESSION[ username ] = "$username";
-
-			 header("Refresh:1 ; url=loggedIndex.html");
-
-			echo "Welcome $username ! You logged in now!<br>";
+			
 
 		 }else{
 
-			echo "Email and password do not match. Please check it!";
-
+			echo "Username and password do not match. Please check it! <a href=index.php> Click to return Main Page </a>";
+			
+			ob_end_flush();
 		 }
-
-	} 
+	
 ?>
