@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="popupbox.css"/>
+		<link type="text/css" rel="stylesheet" href="logreg.css"/>
 		<link type="text/css" rel="stylesheet" href="main.css"/>
 	    <script type="text/javascript" src="https://www.google.com/jsapi">
 	  
