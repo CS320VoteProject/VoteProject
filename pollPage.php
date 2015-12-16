@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</div>
-		<form action="" method="get">
+		<form action="created.html" method="get">
 			<ul id="answersList">
 					Question: 
 					<?php 
